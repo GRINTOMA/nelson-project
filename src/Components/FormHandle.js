@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Form, Container} from 'semantic-ui-react'
 import {Button} from 'react-bootstrap'
 import axios from 'axios';
+import PhoneImput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 function FormHandle(props) {
         const [name, setName] = useState('');
@@ -33,6 +35,8 @@ function FormHandle(props) {
                         <input
                             placeholder="Enter your name..."
                             onChange={(e) => setName(e.target.value)}
+                            type='text'
+                            required
                         />
                     </Form.Field>
                     <Form.Field>
@@ -40,13 +44,18 @@ function FormHandle(props) {
                         <input
                             placeholder="Enter your email..."
                             onChange={(e) => setEmail(e.target.value)}
+                            type='email'
+                            required
                         />
                     </Form.Field>
                     <Form.Field>
                         <label>Phone Number</label>
-                        <input
-                            placeholder="Enter your phone number..."
-                            onChange={(e) => setPhoneNumber(e.target.value)}
+                        <PhoneImput
+                            placeholder='Enter your phone number...'
+                            country="CA"
+                            value={phone_number}
+                            onChange={(e) => setPhoneNumber(e)}
+                            required
                         />
                     </Form.Field>
                     <Form.Field>
@@ -54,6 +63,8 @@ function FormHandle(props) {
                         <input
                             placeholder="Enter your bid..."
                             onChange={(e) => setBid(e.target.value)}
+                            type='number'
+                            required
                         />
                     </Form.Field>
     

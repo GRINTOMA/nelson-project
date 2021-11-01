@@ -1,5 +1,5 @@
 # The Nelson Auction Project
-
+### Project Author: Matthew Grinton
 ## Goal
   The purpose of this project is to creat an embedable web application onto Nelson Public High School's web site to run a charity holiday auction.
   
@@ -8,3 +8,5 @@
   
 ## Current Build
   A live viewable version of the web app can be found [here](https://www.mattgrinton.com)
+
+

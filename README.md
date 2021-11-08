@@ -10,3 +10,9 @@
   A live viewable version of the web app can be found [here](https://www.mattgrinton.com)
 
 
+## Changelog
+
+  ### 1.0.1
+  - Integrated a 4 category Accordion system to the web app
+
+

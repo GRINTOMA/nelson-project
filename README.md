@@ -13,6 +13,6 @@
 ## Changelog
 
   ### 1.0.1
-  - Integrated a 4 category Accordion system to the web app
+  - Integrated a 4 category Accordion system to the web app.
 
 

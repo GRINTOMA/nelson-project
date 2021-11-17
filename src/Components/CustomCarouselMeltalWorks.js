@@ -11,7 +11,9 @@ const CustomCarouselMetalWorks = React.forwardRef((props, ref) => {
             <Image
                 fluid
                 ref={ref}
-                className='mx-auto w-25'
+                className='mx-auto'
+                width='150'
+                height='150'
                 src={props.img}
                 alt='Gift Basket'
             />

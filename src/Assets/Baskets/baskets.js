@@ -38,13 +38,13 @@ export const giftBaskets01 =
         },
         {
             id:7,
-            name:"Indigo basket",
+            name:"Indigo",
             desc:"Ms. Beattie's Biology class presents....An Indigo Basket.",
             img:require("../Images/Image_not_available.png")
         },
         {
             id:8,
-            name:"Book Gift Basket",
+            name:"Book",
             desc:"Ms. Ross' English Literature class presents....A Book Gift Basket.",
             img:require("../Images/Image_not_available.png")
         },

@@ -38,13 +38,13 @@ export const giftBaskets02 =
         },
         {
             id:7,
-            name:"Toy/Imagination Basket",
+            name:"Toy/Imagination",
             desc:"Ms. Cavataio's class presents....Toy/Imagination Basket .",
             img:require("../Images/Image_not_available.png")
         },
         {
             id:8,
-            name:"Pasta Dinner Basket",
+            name:"Pasta Dinner",
             desc:"Mrs. Williams' class presents....Pasta Dinner Basket.",
             img:require("../Images/Image_not_available.png")
         },

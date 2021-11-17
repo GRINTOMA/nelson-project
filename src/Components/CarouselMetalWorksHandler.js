@@ -1,4 +1,5 @@
 import React from 'react'
+import '../index.css'
 import { Carousel, Image, Button } from 'react-bootstrap'
 import PurchaseItem from './PurchaseItem'
 
@@ -11,7 +12,8 @@ const CarouselMetalWorksHandler = React.forwardRef((props, ref) => {
             <Image
                 fluid
                 ref={ref}
-                className='mx-auto w-25'
+                className='mx-auto'
+                style={{maxWidth:'18rem', maxHeight:'18rem'}}
                 src={props.img}
                 alt='Gift Basket'
             />

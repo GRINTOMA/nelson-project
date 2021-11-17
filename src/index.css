@@ -1,0 +1,4 @@
+.Carousel .item img {
+    max-height: 200px;
+    min-width: auto;
+  }

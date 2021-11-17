@@ -16,7 +16,7 @@ const CarouselItemHandler = React.forwardRef((props, ref) => {
                 src={props.img}
                 alt='Gift Basket'
             />
-            <Carousel.Caption className='p-5'>
+            <Carousel.Caption className='p-5 mt-5'>
                 <h4>{props.desc}</h4>
                 <Button variant='primary' onClick={handleShow}>More Info</Button>
             </Carousel.Caption>

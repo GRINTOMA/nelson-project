@@ -14,5 +14,7 @@
 
   ### 1.0.1
   - Integrated a 4 category Accordion system to the web app.
+  ### 1.0.2
+  - Added components for more accurate form control.
 
 

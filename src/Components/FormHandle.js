@@ -6,6 +6,7 @@ import PhoneImput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 
 function FormHandle(props) {
+        const [id, setId] = useState('');
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone_number, setPhoneNumber] = useState('');
@@ -13,9 +14,17 @@ function FormHandle(props) {
     
         const handleSubmit = (e) => {
             e.preventDefault();
-            
-    
-            const objt = { name, email, phone_number, bid };
+            if(name==="" || email==="" || phone_number==="" || bid===null){
+                props.errorHandle("All fields must be filled.")
+                return
+            }
+            if(bid <= 0){
+                props.errorHandle("Bid must be greater than 0")
+                return
+            }
+            const objt = { id, name, email, phone_number, bid };
+
+            //Todo Error Handling
     
             axios
                 .post(
@@ -23,13 +32,19 @@ function FormHandle(props) {
                     objt
                 )
                 .then((response) => {
-                    console.log(response);
-                    console.log(props)
+                    props.formSuccess()
             });
         };
         return (
             <Container fluid className="container">
                 <Form className="form">
+                    <Form.Field>
+                        <input
+                            placeholder={props.id}
+                            onChange={(e) => setId(e.target.value)}
+                            type='hidden'
+                        />
+                    </Form.Field>
                     <Form.Field>
                         <label>Name</label>
                         <input
@@ -63,6 +78,7 @@ function FormHandle(props) {
                         <input
                             placeholder="Enter your bid..."
                             onChange={(e) => setBid(e.target.value)}
+                            min='1'
                             type='number'
                             required
                         />

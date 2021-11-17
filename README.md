@@ -18,5 +18,7 @@
   - Added components for more accurate form control.
   ### 1.0.3
   - Bug testing issues with automated git pull.
+  ### 1.0.4
+  - Fixing spacing with gift basket section.
 
 

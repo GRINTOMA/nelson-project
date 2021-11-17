@@ -12,11 +12,11 @@ const CarouselItemHandler = React.forwardRef((props, ref) => {
             <Image
                 fluid
                 ref={ref}
-                className='mx-auto w-100 p-5'
+                className='mx-auto w-100 p-5 mb-5'
                 src={props.img}
                 alt='Gift Basket'
             />
-            <Carousel.Caption>
+            <Carousel.Caption className='p-5'>
                 <h4>{props.desc}</h4>
                 <Button variant='primary' onClick={handleShow}>More Info</Button>
             </Carousel.Caption>

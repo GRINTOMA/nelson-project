@@ -12,8 +12,7 @@ const CarouselItemHandler = React.forwardRef((props, ref) => {
             <Image
                 fluid
                 ref={ref}
-                className='mx-auto'
-                style={{maxWidth:'200px', maxHeight:'300px'}}
+                className='mx-auto w-100 p-4'
                 src={props.img}
                 alt='Gift Basket'
             />

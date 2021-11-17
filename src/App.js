@@ -21,8 +21,7 @@ function App() {
             <Accordion.Item eventKey='0'>
                 <Accordion.Header><h2>Gift Baskets</h2></Accordion.Header>
                 <Accordion.Body>
-                    <Stack gap={3}>
-                        <Stack direction='horizontal' gap={1}>
+                        <Stack gap={1}>
                             <Carousel className='mx-auto p-3 w-50' variant='dark'>
                                 {giftBaskets01.map((basket, i) => <CarouselItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
                             </Carousel>
@@ -30,7 +29,6 @@ function App() {
                                 {giftBaskets02.map((basket, i) => <CarouselItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
                             </Carousel>
                         </Stack>
-                    </Stack>
                 </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey='1'>

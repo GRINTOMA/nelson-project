@@ -16,5 +16,7 @@
   - Integrated a 4 category Accordion system to the web app.
   ### 1.0.2
   - Added components for more accurate form control.
+  ### 1.0.3
+  - Bug testing issues with automated git pull.
 
 

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css","webpack://src/App.css"],"names":[],"mappings":"AAAA,oBACI,gBAAiB,CACjB,cACF,CCHF,GACI,iBACJ","file":"main.8c01b4cd.chunk.css","sourcesContent":[".Carousel .item img {\r\n    max-height: 200px;\r\n    min-width: auto;\r\n  }","h2{\r\n    text-align: center;\r\n}\r\n"]}

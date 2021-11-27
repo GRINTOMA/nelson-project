@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import * as emailjs from 'emailjs-com'
 import { Form, Container} from 'semantic-ui-react'
 import {Button} from 'react-bootstrap'
 import axios from 'axios';
@@ -6,7 +7,7 @@ import PhoneImput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 
 function CustomPurchaseHandle(props) {
-        const [id, setId] = useState('');
+        const [desc, setDesc] = useState('');
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone_number, setPhoneNumber] = useState('');
@@ -14,7 +15,8 @@ function CustomPurchaseHandle(props) {
     
         const handleSubmit = (e) => {
             e.preventDefault();
-            if(name==="" || email==="" || phone_number==="" || qty===null){
+            const id = props.id
+            if(desc==="" || name==="" || email==="" || phone_number==="" || qty===null){
                 props.errorHandle("All fields must be filled.")
                 return
             }
@@ -22,13 +24,17 @@ function CustomPurchaseHandle(props) {
                 props.errorHandle("Quantity must be greater than 0")
                 return
             }
-            const objt = { id, name, email, phone_number, qty };
+            const objt = { id, desc, name, email, phone_number, qty };
 
-            //Todo Error Handling
-    
+            emailjs.sendForm('service_6olt9ei', 'template_g7uxo7z', '#custom-form', 'user_lHDjn3QujHNMDaq5tVBLt')
+            .then((result) =>{
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
             axios
                 .post(
-                    'https://sheet.best/api/sheets/8bf9f4cf-81c4-42c0-b7be-b18ea790eb6d',
+                    'https://sheet.best/api/sheets/bed32842-e7a8-48c4-9003-90ea86945ad5',
                     objt
                 )
                 .then((response) => {
@@ -37,22 +43,29 @@ function CustomPurchaseHandle(props) {
         };
         return (
             <Container fluid className="container">
-                <Form className="form">
-                    <Form.Field>
-                        <input 
-                            type='hidden' 
-                            onChange={(e) => setId(e.target.value)}
+                <Form className="form" id='custom-form'>
+                <Form.Field>
+                        <label>Name</label>
+                        <input
+                            value={props.name}
+                            onChange={(e) => setName(e.target.value)}
+                            name='product'
+                            hidden
                         />
                     </Form.Field>
                     <Form.Field>
                         <label>Custom Order Description</label>
-                        <textarea placeholder='Please provide a brief description here....'/>
+                        <textarea 
+                        onChange={(e) => setDesc(e.target.value)}
+                        placeholder='Please provide a brief description here....'/>
+                        
                     </Form.Field>
                     <Form.Field>
                         <label>Name</label>
                         <input
                             placeholder="Enter your name..."
                             onChange={(e) => setName(e.target.value)}
+                            name='to_name'
                             type='text'
                             required
                         />
@@ -62,6 +75,7 @@ function CustomPurchaseHandle(props) {
                         <input
                             placeholder="Enter your email..."
                             onChange={(e) => setEmail(e.target.value)}
+                            name='to_email'
                             type='email'
                             required
                         />
@@ -88,7 +102,7 @@ function CustomPurchaseHandle(props) {
                     </Form.Field>
     
                     <Button color="blue" type="submit" onClick={handleSubmit}>
-                        Submit
+                        Submit Custom Order
                     </Button>
                 </Form>
             </Container>

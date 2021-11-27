@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Form, Container} from 'semantic-ui-react'
-import {Button} from 'react-bootstrap'
+//import {Button} from 'react-bootstrap'
 import axios from 'axios';
 import PhoneImput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
+import * as emailjs from 'emailjs-com'
 
 function FormHandle(props) {
-        const [id, setId] = useState('');
+        const [setProduct] = useState('')
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone_number, setPhoneNumber] = useState('');
@@ -14,6 +15,8 @@ function FormHandle(props) {
     
         const handleSubmit = (e) => {
             e.preventDefault();
+            const id = props.id
+            const product = props.name
             if(name==="" || email==="" || phone_number==="" || bid===null){
                 props.errorHandle("All fields must be filled.")
                 return
@@ -22,9 +25,14 @@ function FormHandle(props) {
                 props.errorHandle("Bid must be greater than 0")
                 return
             }
-            const objt = { id, name, email, phone_number, bid };
+            const objt = { id, product, name, email, phone_number, bid };
 
-            //Todo Error Handling
+            emailjs.sendForm('service_6olt9ei', 'template_jyvm9yl', '#bid-form', 'user_lHDjn3QujHNMDaq5tVBLt')
+                .then((result) =>{
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
     
             axios
                 .post(
@@ -37,18 +45,21 @@ function FormHandle(props) {
         };
         return (
             <Container fluid className="container">
-                <Form className="form">
-                    <Form.Field>
+                <Form className="form" id='bid-form'>
+                <Form.Field>
                         <input
-                            placeholder={props.id}
-                            onChange={(e) => setId(e.target.value)}
-                            type='hidden'
+                            placeholder="Enter your name..."
+                            name='product'
+                            value={props.name}
+                            onChange= {(e) => setProduct(e.target.value)}
+                            hidden
                         />
                     </Form.Field>
                     <Form.Field>
                         <label>Name</label>
                         <input
                             placeholder="Enter your name..."
+                            name='to_name'
                             onChange={(e) => setName(e.target.value)}
                             type='text'
                             required
@@ -58,6 +69,7 @@ function FormHandle(props) {
                         <label>Email</label>
                         <input
                             placeholder="Enter your email..."
+                            name='to_email'
                             onChange={(e) => setEmail(e.target.value)}
                             type='email'
                             required
@@ -84,9 +96,7 @@ function FormHandle(props) {
                         />
                     </Form.Field>
     
-                    <Button color="blue" type="submit" onClick={handleSubmit}>
-                        Submit
-                    </Button>
+                    <input className='input-button' color="blue" type="submit" value='Submit Bid' onClick={handleSubmit}/>
                 </Form>
             </Container>
         );

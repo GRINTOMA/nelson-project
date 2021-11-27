@@ -5,7 +5,7 @@ import FormHandle from './FormHandle'
 const Bid = React.forwardRef((props, ref) => {
     const [error, setError] = React.useState("")
     return (
-        <Offcanvas placementt='end' backdrop={false} scroll={true} ref={ref} {...props}>
+        <Offcanvas placementt='end' backdrop={true} scroll={false} ref={ref} {...props}>
             <Offcanvas.Header closeButton>
                 <Offcanvas.Title>{props.name}</Offcanvas.Title>
             </Offcanvas.Header>
@@ -15,7 +15,15 @@ const Bid = React.forwardRef((props, ref) => {
                     <Accordion.Item eventKey='0'>
                         <Accordion.Header>{props.name} Basket Description</Accordion.Header>
                         <Accordion.Body>
-                            {props.desc}
+                           {props.desc}
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey='1'>
+                        <Accordion.Header>{props.name} Basket Contents</Accordion.Header>
+                        <Accordion.Body>
+                           <ul>
+                                {props.list.map((item, i) => <li key={i}>{item}</li>)}
+                           </ul>
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>

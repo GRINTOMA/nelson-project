@@ -2,68 +2,94 @@ export const giftBaskets01 =
     [
         {
             id:1,
-            name:"Movie Night",
-            desc:"Ms. Mullan's Healthcare class presents....Movie Night.",
-            img:require("../Images/Image_not_available.png")
+            name:"Blue Jays Swag",
+            desc:"Donated by the Mercer family.",
+            list: ['Blue Jays bobblehead - Cavan Biggio', 
+            'Blue Jays BBQ tools set', 
+            'Blue Jays apron', 
+            'Blue Jays rainbow beach towel', 
+            'Blue Jays backpack', 
+            'Blue Jays lanyard', 
+            'Blue Jays “Buck Martinez” alarm clock', 
+            'Marvel Blue Jays Spiderman', 
+            'Blue Jay shirt - size XL'],
+            price: 250,
+            img:require("../Images/gift_baskets/img1.jpg")
         },
         {
             id:2,
             name:"Green Thumb",
             desc:"Ms. Roy's Art class presents....Green Thumb.",
+            list: ['Small plant', 
+            'Seeds', 
+            'Book', 
+            'Sunflower kit', 
+            'Reusable tote'],
+            price: 0,
             img:require("../Images/Image_not_available.png")
         },
         {
             id:3,
             name:"All things Muskoka!",
             desc:"The Special Education department presents....All things Muskoka!",
+            list: ['item 1', 
+            'item 2', 
+            'item 3', 
+            'item 4', 
+            'item 5', 
+            'item 6', 
+            'item 7', 
+            'item 8', 
+            'item 9'],
+            price: 0,
             img:require("../Images/Image_not_available.png")
         },
         {
             id:4,
-            name:"Ferris Beuller's Spa Day",
+            name:"Ferris Bueller's Spa Day",
             desc:"The Healthcare SHSM class presents....Ferris Beuller's Spa Day.",
+            list: ['item 1', 
+            'item 2', 
+            'item 3', 
+            'item 4', 
+            'item 5', 
+            'item 6', 
+            'item 7', 
+            'item 8', 
+            'item 9'],
+            price: 0,
             img:require("../Images/Image_not_available.png")
         },
         {
             id:5,
             name:"Family Game Night",
             desc:"Teachers with a period 2 prep present....Family Game Night.",
-            img:require("../Images/Image_not_available.png")
+            list: ['item 1', 
+            'item 2', 
+            'item 3', 
+            'item 4', 
+            'item 5', 
+            'item 6', 
+            'item 7', 
+            'item 8', 
+            'item 9'],
+            price: 90,
+            img:require("../Images/gift_baskets/img5.jpg")
         },
         {
             id:6,
             name:"Fishing",
             desc:"Mr. Kowgier's English class presents....Fishing.",
-            img:require("../Images/Image_not_available.png")
-        },
-        {
-            id:7,
-            name:"Indigo",
-            desc:"Ms. Beattie's Biology class presents....An Indigo Basket.",
-            img:require("../Images/Image_not_available.png")
-        },
-        {
-            id:8,
-            name:"Book",
-            desc:"Ms. Ross' English Literature class presents....A Book Gift Basket.",
-            img:require("../Images/Image_not_available.png")
-        },
-        {
-            id:9,
-            name:"Gourmet",
-            desc:"Ms. Catanzaro's Math class presents...A Gourmet Gift Basket.",
-            img:require("../Images/Image_not_available.png")
-        },
-        {
-            id:10,
-            name:"Winter",
-            desc:"Mr. Mauro's Business class presents....A Winter themed basket.",
-            img:require("../Images/Image_not_available.png")
-        },
-        {
-            id:11,
-            name:"Willy Wonka's Candy Emporium",
-            desc:"Ms. Saslove's French class presents...Willy Wonka's Candy Emporium.",
+            list: ['item 1', 
+            'item 2', 
+            'item 3', 
+            'item 4', 
+            'item 5', 
+            'item 6', 
+            'item 7', 
+            'item 8', 
+            'item 9'],
+            price: 0,
             img:require("../Images/Image_not_available.png")
         }
     ]

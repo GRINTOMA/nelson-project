@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import * as emailjs from 'emailjs-com'
 import { Form, Container} from 'semantic-ui-react'
 import {Button} from 'react-bootstrap'
 import axios from 'axios';
@@ -6,7 +7,7 @@ import PhoneImput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 
 function PurchaseFormHandle(props) {
-        const [id, setId] = useState('');
+        const setProd = useState('')
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone_number, setPhoneNumber] = useState('');
@@ -14,6 +15,8 @@ function PurchaseFormHandle(props) {
     
         const handleSubmit = (e) => {
             e.preventDefault();
+            const id = props.id
+            const product = props.name
             if(name==="" || email==="" || phone_number==="" || qty===null){
                 props.errorHandle("All fields must be filled.")
                 return
@@ -22,9 +25,14 @@ function PurchaseFormHandle(props) {
                 props.errorHandle("Quantity must be greater than 0")
                 return
             }
-            const objt = { id, name, email, phone_number, qty };
+            const objt = { id, product, name, email, phone_number, qty };
 
-            //Todo Error Handling
+            emailjs.sendForm('service_6olt9ei', 'template_g7uxo7z', '#metal-form', 'user_lHDjn3QujHNMDaq5tVBLt')
+            .then((result) =>{
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
     
             axios
                 .post(
@@ -37,11 +45,13 @@ function PurchaseFormHandle(props) {
         };
         return (
             <Container fluid className="container">
-                <Form className="form">
+                <Form className="form" id='metal-form'>
                     <Form.Field>
-                        <input 
-                            type='hidden' 
-                            onChange={(e) => setId(e.target.value)}
+                         <input
+                            value={props.name}
+                            onChange={(e) => setProd(e.target.value)}
+                            name='product'
+                            hidden
                         />
                     </Form.Field>
                     <Form.Field>
@@ -49,6 +59,7 @@ function PurchaseFormHandle(props) {
                         <input
                             placeholder="Enter your name..."
                             onChange={(e) => setName(e.target.value)}
+                            name='to_name'
                             type='text'
                             required
                         />
@@ -58,6 +69,7 @@ function PurchaseFormHandle(props) {
                         <input
                             placeholder="Enter your email..."
                             onChange={(e) => setEmail(e.target.value)}
+                            name='to_email'
                             type='email'
                             required
                         />
@@ -84,7 +96,7 @@ function PurchaseFormHandle(props) {
                     </Form.Field>
     
                     <Button color="blue" type="submit" onClick={handleSubmit}>
-                        Submit
+                        Submit Purchase
                     </Button>
                 </Form>
             </Container>

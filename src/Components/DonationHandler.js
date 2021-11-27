@@ -1,7 +1,9 @@
 import React from 'react'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
+import DonationFormHandler from './DonationFormHandler'
 
 const DonationHandler = (props) => {
+    const [error, setError] = React.useState("")
     return (
         <Modal {...props}
             size='lg'
@@ -18,7 +20,7 @@ const DonationHandler = (props) => {
                         This will ensure that Nelson will receive the money. 
                         Monetary donations qualify for a tax receipt.
                     </p>
-                    <h4>Please Specify the Following Information</h4>
+                    <h4>Please specify the following information when redirected</h4>
                     <ol>
                         <li>
                             School: Nelson HS
@@ -30,7 +32,8 @@ const DonationHandler = (props) => {
                             Message: Food Drive
                         </li>
                     </ol>
-                    <Button variant='primary' href='https://hdsb.schoolcashonline.com/Fee/Details/583/181/false/true' target='_blank'>Donate Now!</Button>
+                    {error !== ""? <p style={{color:'red'}}>{error}</p>:null}
+                    <DonationFormHandler {...props} formSuccess={props.onHide} errorHandle={setError}/>
                 </Modal.Body>
             
         </Modal>

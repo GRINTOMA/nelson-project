@@ -20,7 +20,7 @@ function FormHandle(props) {
             socket.on("bid-error", (message) => {
                 props.errorHandle(message)
             })
-            axios.get(`https://mattgrinton.com/api/bids/${props.id}`)
+            axios.get(`https://api.nelson-holiday-sale.com/bids/${props.id}`)
             .then((resp) => {
                 setCurrentBid(Number(resp.data.maxBid))
             })
@@ -47,7 +47,7 @@ function FormHandle(props) {
 
             axios
                 .post(
-                    `https://mattgrinton.com/api/bids/${props.id}`,
+                    `https://api.nelson-holiday-sale.com/bids/${props.id}`,
                     {bid:bid}
                 )
                 .then((response) =>{

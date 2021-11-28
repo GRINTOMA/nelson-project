@@ -4,14 +4,14 @@ import { Server } from "socket.io"
 import cors from 'cors'
 import bodyParser from "body-parser"
 
-const corsOptions = {origin:'https://mattgrinton.com'}
+const corsOptions = {origin:'https://nelson-holiday-sale.com'}
 const app = express()
 app.use(cors(corsOptions))
 app.use(bodyParser.json())
 const serv = createServer(app)
 const io = new Server(serv, {
     cors: {
-        origin: "https://mattgrinton.com",
+        origin: "https://nelson-holiday-sale.com",
         methods: ["GET", "POST"]
     }
 })
@@ -20,122 +20,122 @@ let items = [
     {
         id: 1,
         userName: "",
-        maxBid: 250
+        maxBid: 50
     },
     {
         id: 2,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 3,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 4,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 5,
         userName: "",
-        maxBid: 90
+        maxBid: 25
     },
     {
         id: 6,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 7,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 8,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 9,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 10,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 11,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 12,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 13,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 14,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 15,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 16,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 17,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 18,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 19,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 20,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 21,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 22,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 23,
         userName: "",
-        maxBid: 0
+        maxBid: 50
     },
     {
         id: 24,
         userName: "",
-        maxBid: 60
+        maxBid: 20
     }
 ]
 

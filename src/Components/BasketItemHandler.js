@@ -12,7 +12,6 @@ const BasketItemHandler = React.forwardRef((props, ref) => {
     useEffect(() => {
         axios.get(`https://api.nelson-holiday-sale.com/bids/${props.id}`)
         .then((resp) => {
-            console.log(resp.data)
             setCurrentBid(Number(resp.data.maxBid))
         })
     })

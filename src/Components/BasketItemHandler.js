@@ -10,7 +10,7 @@ const BasketItemHandler = React.forwardRef((props, ref) => {
     const handleClose = () =>  setShow(false)
     const handleShow = () => setShow(true)
     useEffect(() => {
-        axios.get(`http://localhost:54545/bids/${props.id}`)
+        axios.get(`https://mattgrinton.com/api/bids/${props.id}`)
         .then((resp) => {
             console.log(resp.data)
             setCurrentBid(Number(resp.data.maxBid))

@@ -20,5 +20,7 @@
   - Bug testing issues with automated git pull.
   ### 1.0.4
   - Fixing spacing with gift basket section.
+  ### 1.0.5
+  - Adding socket.io for current bid functionallity
 
 

@@ -23,7 +23,7 @@ export const crafts =
         },
         {
             id:4,
-            name:"Butterflys",
+            name:"Butterfly",
             price: 5,
             qty:19,
             img:require("../Images/cpp/cards/imgHover1.jpg")

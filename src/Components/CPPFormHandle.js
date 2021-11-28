@@ -78,7 +78,7 @@ function CPPFormHandle(props) {
                         <label>Phone Number</label>
                         <PhoneImput
                             placeholder='Enter your phone number...'
-                            country="CA"
+                            defaultCountry="CA"
                             value={phone_number}
                             onChange={(e) => setPhoneNumber(e)}
                             required

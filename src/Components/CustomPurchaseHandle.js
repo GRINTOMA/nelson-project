@@ -55,9 +55,10 @@ function CustomPurchaseHandle(props) {
                     </Form.Field>
                     <Form.Field>
                         <label>Custom Order Description</label>
-                        <textarea 
-                        onChange={(e) => setDesc(e.target.value)}
-                        placeholder='Please provide a brief description here....'/>
+                        <textarea
+                            rows='3'
+                            onChange={(e) => setDesc(e.target.value)}
+                            placeholder='Please provide a brief description here....'/>
                         
                     </Form.Field>
                     <Form.Field>
@@ -84,7 +85,7 @@ function CustomPurchaseHandle(props) {
                         <label>Phone Number</label>
                         <PhoneImput
                             placeholder='Enter your phone number...'
-                            country="CA"
+                            defaultCountry="CA"
                             value={phone_number}
                             onChange={(e) => setPhoneNumber(e)}
                             required

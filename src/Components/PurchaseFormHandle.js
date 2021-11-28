@@ -8,6 +8,7 @@ import 'react-phone-number-input/style.css'
 
 function PurchaseFormHandle(props) {
         const setProd = useState('')
+        const [desc, setDesc] = useState('')
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone_number, setPhoneNumber] = useState('');
@@ -25,7 +26,7 @@ function PurchaseFormHandle(props) {
                 props.errorHandle("Quantity must be greater than 0")
                 return
             }
-            const objt = { id, product, name, email, phone_number, qty };
+            const objt = { id, product, desc, name, email, phone_number, qty };
 
             emailjs.sendForm('service_6olt9ei', 'template_g7uxo7z', '#metal-form', 'user_lHDjn3QujHNMDaq5tVBLt')
             .then((result) =>{
@@ -55,6 +56,14 @@ function PurchaseFormHandle(props) {
                         />
                     </Form.Field>
                     <Form.Field>
+                        <label>Custom Order Description</label>
+                        <textarea 
+                        rows='3'
+                        onChange={(e) => setDesc(e.target.value)}
+                        placeholder='Please provide a brief description here....'/>
+                        
+                    </Form.Field>
+                    <Form.Field>
                         <label>Name</label>
                         <input
                             placeholder="Enter your name..."
@@ -78,7 +87,7 @@ function PurchaseFormHandle(props) {
                         <label>Phone Number</label>
                         <PhoneImput
                             placeholder='Enter your phone number...'
-                            country="CA"
+                            defaultCountry="CA"
                             value={phone_number}
                             onChange={(e) => setPhoneNumber(e)}
                             required
@@ -87,7 +96,7 @@ function PurchaseFormHandle(props) {
                     <Form.Field>
                         <label>Quantity</label>
                         <input
-                            placeholder="Enter the quantity you'd like..."
+                            placeholder="Enter the quantity you would like..."
                             onChange={(e) => setQty(e.target.value)}
                             min='1'
                             type='number'

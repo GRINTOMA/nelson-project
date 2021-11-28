@@ -1,17 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { Form, Container} from 'semantic-ui-react'
-//import {Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import axios from 'axios';
 import PhoneImput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import * as emailjs from 'emailjs-com'
+import { SocketContext } from '../socket';
 
 function FormHandle(props) {
+        const socket = useContext(SocketContext)
         const [setProduct] = useState('')
+        const [currentBid, setCurrentBid] = useState(0)
         const [name, setName] = useState('');
         const [email, setEmail] = useState('');
         const [phone_number, setPhoneNumber] = useState('');
         const [bid, setBid] = useState('');
+
+        useEffect(() => {
+            socket.on("bid-error", (message) => {
+                props.errorHandle(message)
+            })
+            axios.get(`https://mattgrinton.com/api/bids/${props.id}`)
+            .then((resp) => {
+                setCurrentBid(Number(resp.data.maxBid))
+            })
+            socket.on("new-bid", (itemId, itemBid) => {
+                if(itemId===props.id){
+                    setCurrentBid(itemBid)
+                }
+            })
+        })
     
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -27,21 +45,31 @@ function FormHandle(props) {
             }
             const objt = { id, product, name, email, phone_number, bid };
 
-            emailjs.sendForm('service_6olt9ei', 'template_jyvm9yl', '#bid-form', 'user_lHDjn3QujHNMDaq5tVBLt')
-                .then((result) =>{
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
-    
             axios
                 .post(
-                    'https://sheet.best/api/sheets/a267dcf9-b2d0-4f20-b1bc-acb2984321b3',
-                    objt
+                    `https://mattgrinton.com/api/bids/${props.id}`,
+                    {bid:bid}
                 )
-                .then((response) => {
-                    props.formSuccess()
-            });
+                .then((response) =>{
+                    if(response.data.success === false){
+                        props.errorHandle(response.data.errorMessage)
+                    } else {
+                        axios
+                            .post(
+                                'https://sheet.best/api/sheets/a267dcf9-b2d0-4f20-b1bc-acb2984321b3',
+                                objt
+                            )
+                            .then((response) => {
+                                props.formSuccess()
+                        });
+                        emailjs.sendForm('service_6olt9ei', 'template_jyvm9yl', '#bid-form', 'user_lHDjn3QujHNMDaq5tVBLt')
+                            .then((result) =>{
+                                console.log(result.text);
+                            }, (error) => {
+                                console.log(error.text);
+                        });
+                    }
+                })
         };
         return (
             <Container fluid className="container">
@@ -79,12 +107,13 @@ function FormHandle(props) {
                         <label>Phone Number</label>
                         <PhoneImput
                             placeholder='Enter your phone number...'
-                            country="CA"
+                            defaultCountry='CA'
                             value={phone_number}
                             onChange={(e) => setPhoneNumber(e)}
                             required
                         />
                     </Form.Field>
+                    <h4>Current Bid is: ${currentBid} </h4>
                     <Form.Field>
                         <label>Bid</label>
                         <input
@@ -96,7 +125,9 @@ function FormHandle(props) {
                         />
                     </Form.Field>
     
-                    <input className='input-button' color="blue" type="submit" value='Submit Bid' onClick={handleSubmit}/>
+                    <Button color="blue" type="submit" onClick={handleSubmit}>
+                        Submit Bid
+                    </Button>
                 </Form>
             </Container>
         );

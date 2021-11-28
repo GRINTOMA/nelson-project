@@ -3,7 +3,7 @@ export const metalWorks =
         {
             id:1,
             name:"Family Name Sign",
-            desc:'21" w x 14" H   #14 gauge steel',
+            desc:'21" w x 14" H   #14 gauge steel, we will contact for any additional details.',
             price: 60,
             img:require("../Images/poulin_metalworks/img1.jpg")
         },
@@ -17,7 +17,7 @@ export const metalWorks =
         {
             id:3,
             name:"Split Monogram Sign",
-            desc:'12" w x 11" H   #14 gauge steel',
+            desc:'12" w x 11" H   #14 gauge steel,we will contact for any additional details.',
             price: 50,
             img:require("../Images/poulin_metalworks/img3.jpg")
         },

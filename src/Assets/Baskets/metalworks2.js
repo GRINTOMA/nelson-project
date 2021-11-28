@@ -10,7 +10,7 @@ export const metalWorks2 =
         {
             id:10,
             name:"Business Card Holder",
-            desc:'Finish to 11" w x 7"H',
+            desc:'Finish to 11" w x 7"H, we will contact for any additional details.',
             price: 30,
             img:require("../Images/poulin_metalworks/img10.jpg")
         },

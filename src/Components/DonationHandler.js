@@ -1,9 +1,7 @@
 import React from 'react'
-import { Modal } from 'react-bootstrap'
-import DonationFormHandler from './DonationFormHandler'
+import { Modal, Button } from 'react-bootstrap'
 
 const DonationHandler = (props) => {
-    const [error, setError] = React.useState("")
     return (
         <Modal {...props}
             size='lg'
@@ -32,8 +30,9 @@ const DonationHandler = (props) => {
                             Message: Food Drive
                         </li>
                     </ol>
-                    {error !== ""? <p style={{color:'red'}}>{error}</p>:null}
-                    <DonationFormHandler {...props} formSuccess={props.onHide} errorHandle={setError}/>
+                    <Button variant='primary' href='https://hdsb.schoolcashonline.com/Fee/Details/583/181/false/true' target='_blank'>
+                        Donate Now!
+                    </Button>
                 </Modal.Body>
             
         </Modal>

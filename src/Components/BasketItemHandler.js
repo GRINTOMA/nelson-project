@@ -17,7 +17,7 @@ const BasketItemHandler = React.forwardRef((props, ref) => {
     })
 
     return (
-        <Card style={{ width: '18rem' }} {...props}>
+        <Card className='mx-auto p-3' style={{ width: '18rem' }} {...props}>
             <Card.Img 
                 variant="top" 
                 src={props.img}

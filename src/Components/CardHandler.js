@@ -7,14 +7,14 @@ const CardHandler = (props) => {
     const handleClose = () =>  setShow(false)
     const handleShow = () => setShow(true)
     return (
-        <Card style={{ width: '18rem' }} {...props}>
+        <Card className='mx-auto' style={{ width: '18rem' }} {...props}>
             <Card.Img 
                 variant="top" 
                 src={props.img}
                 alt='Product'
                 />
             <Card.Body>
-                <Card.Title>{props.name} ${props.price}</Card.Title>
+                <Card.Title>{props.name}<br/> Price: ${props.price}</Card.Title>
                 <Card.Text>
                     {props.desc}
                 </Card.Text>

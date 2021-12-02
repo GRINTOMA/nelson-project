@@ -94,7 +94,7 @@ function CPPFormHandle(props) {
                             required
                         />
                     </Form.Field>
-    
+                    <p>A confirmation email will sent to the address above.</p>
                     <Button color="blue" type="submit" onClick={handleSubmit}>
                         Submit Purchase
                     </Button>

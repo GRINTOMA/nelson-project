@@ -119,12 +119,13 @@ function FormHandle(props) {
                         <input
                             placeholder="Enter your bid..."
                             onChange={(e) => setBid(e.target.value)}
+                            name='bid'
                             min='1'
                             type='number'
                             required
                         />
                     </Form.Field>
-    
+                    <p>A confirmation email will sent to the address above.</p>
                     <Button color="blue" type="submit" onClick={handleSubmit}>
                         Submit Bid
                     </Button>

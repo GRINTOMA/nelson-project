@@ -1,9 +1,9 @@
-export const giftBaskets03 = 
+export const giftBaskets06 = 
     [
         {
-            id:9,
-            name:"Gourmet",
-            desc:"Ms. Catanzaro's Math class presents...A Gourmet Gift Basket.",
+            id:21,
+            name:"Staycation",
+            desc:"",
             list: ['item 1', 
             'item 2', 
             'item 3', 
@@ -17,9 +17,9 @@ export const giftBaskets03 =
             img:require("../Images/Image_not_available.png")
         },
         {
-            id:10,
-            name:"Winter",
-            desc:"Mr. Mauro's Business class presents....A Winter themed basket.",
+            id:22,
+            name:"Chilly Days & Cozy Nights",
+            desc:"Mr. Killins Science class presents...Movie Night .",
             list: ['item 1', 
             'item 2', 
             'item 3', 
@@ -33,9 +33,9 @@ export const giftBaskets03 =
             img:require("../Images/Image_not_available.png")
         },
         {
-            id:11,
-            name:"Willy Wonka's Candy Emporium",
-            desc:"Ms. Saslove's French class presents...Willy Wonka's Candy Emporium.",
+            id:23,
+            name:"Movie Night",
+            desc:"Items for a night at the movies",
             list: ['item 1', 
             'item 2', 
             'item 3', 
@@ -49,15 +49,11 @@ export const giftBaskets03 =
             img:require("../Images/Image_not_available.png")
         },
         {
-            id:12,
-            name:"Charcuterie Plus",
-            desc:"Our main office staff presents....Charcuterie Plus.",
-            list: ['Wood and resin charcuterie board (hand crafted by Principal Sampson)', 
-            'Small serving bowls/ramekins', 
-            'Cheese knives, tea towels, napkins', 
-            'Variety of olives, bruschetta, pickles, antipasto & crackers', 
-            'Variety of sweets'],
-            price: 190,
-            img:require("../Images/gift_baskets/img12.jpg")
-        }
+            id:24,
+            name:"Cherubs",
+            desc:'2 sets of 6 Vintage Mikasa guilded porcelain cherub musician set. Each cherub is 4.00" x 2.50" ',
+            list: [],
+            price: 60,
+            img:require("../Images/gift_baskets/img24.jpg")
+        },        
     ]

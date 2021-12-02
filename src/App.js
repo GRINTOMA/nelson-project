@@ -6,10 +6,17 @@ import { giftBaskets01 } from './Assets/Baskets/baskets';
 import { giftBaskets02 } from './Assets/Baskets/baskets02';
 import { giftBaskets03 } from './Assets/Baskets/baskets03';
 import { giftBaskets04 } from './Assets/Baskets/baskets04';
+import { giftBaskets05 } from './Assets/Baskets/baskets05';
+import { giftBaskets06 } from './Assets/Baskets/baskets06';
+import { giftBaskets07 } from './Assets/Baskets/baskets07';
 import { metalWorks } from './Assets/Baskets/metalworks';
 import { metalWorks2 } from './Assets/Baskets/metalworks2';
+import { metalWorks3 } from './Assets/Baskets/metalworks3';
+import { metalWorks4 } from './Assets/Baskets/metalworks4';
 import { bakedGoods } from './Assets/Baskets/bakedgoods';
+import { bakedGoods2 } from './Assets/Baskets/bakedgoods2';
 import { crafts } from './Assets/Baskets/crafts';
+import { crafts2 } from './Assets/Baskets/crafts2';
 import BasketItemHandler from './Components/BasketItemHandler';
 import CardMetalWorksHandler from './Components/CardMetalWorksHandler';
 import DonationHandler from './Components/DonationHandler';
@@ -46,6 +53,15 @@ function App() {
                             <Stack direction='horizontal' gap={5}>
                                 {giftBaskets04.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
                             </Stack>
+                            <Stack direction='horizontal' gap={5}>
+                                {giftBaskets05.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
+                            </Stack>
+                            <Stack direction='horizontal' gap={5}>
+                                {giftBaskets06.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
+                            </Stack>
+                            <Stack direction='horizontal' gap={5}>
+                                {giftBaskets07.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
+                            </Stack>
                         </Stack>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -58,7 +74,13 @@ function App() {
                             </Stack>
                             <Stack direction='horizontal' gap={1}>
                                 {metalWorks2.map((mWork, i) => <CardMetalWorksHandler key={i} {...mWork} img={mWork.img.default} ref={ref}/>)}
-                                <Card style={{ width: '18rem' }}>
+                            </Stack>
+                            <Stack direction='horizontal' gap={1}>
+                                {metalWorks3.map((mWork, i) => <CardMetalWorksHandler key={i} {...mWork} img={mWork.img.default} ref={ref}/>)}
+                            </Stack>
+                            <Stack direction='horizontal' gap={1}>
+                                {metalWorks4.map((mWork, i) => <CardMetalWorksHandler key={i} {...mWork} img={mWork.img.default} ref={ref}/>)}
+                                <Card className='mx-auto' style={{ width: '18rem' }}>
                                     <Card.Img 
                                         variant="top" 
                                         src={img}
@@ -82,7 +104,13 @@ function App() {
                                 {bakedGoods.map((order, i) => <CardHandler key={i} {...order} img={order.img.default}/>)}
                             </Stack>
                             <Stack direction='horizontal' gap={1}>
+                                {bakedGoods2.map((order, i) => <CardHandler key={i} {...order} img={order.img.default}/>)}
+                            </Stack>
+                            <Stack direction='horizontal' gap={1}>
                                 {crafts.map((order, i) => <CardHandler key={i} {...order} img={order.img.default}/>)}
+                            </Stack>
+                            <Stack direction='horizontal' gap={1}>
+                                {crafts2.map((order, i) => <CardHandler key={i} {...order} img={order.img.default}/>)}
                             </Stack>
                         </Stack>
                     </Accordion.Body>

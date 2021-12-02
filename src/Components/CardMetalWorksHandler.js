@@ -8,14 +8,14 @@ const CarouselMetalWorksHandler = React.forwardRef((props, ref) => {
     const handleClose = () =>  setShow(false)
     const handleShow = () => setShow(true)
     return (
-        <Card style={{ width: '18rem' }} {...props}>
+        <Card className='mx-auto' style={{ width: '18rem' }} {...props}>
             <Card.Img 
                 variant="top" 
                 src={props.img}
                 alt='Product'
                 />
             <Card.Body>
-                <Card.Title>{props.name} ${props.price}</Card.Title>
+                <Card.Title>{props.name}<br/> Price:${props.price}</Card.Title>
                 <Button variant='primary' onClick={handleShow}>Purchase</Button>
             </Card.Body>
             <PurchaseItem {...props} img={props.img} show={show} onHide={handleClose}/>

@@ -45,5 +45,17 @@ export const giftBaskets07 =
             'Mug and Hot Chocolate'],
             price: 150,
             img:require("../Images/gift_baskets/img27.jpg")
-        },        
+        }, 
+        {
+            id:28,
+            name:"Gourmet",
+            desc:"Ms. Catanzaro's Math class presents...A Gourmet Gift Basket.",
+            list: ['Custom charcuterie board (Nelson “N”)', 
+            'Custom oil and vinegar bottles', 
+            'Serving knives', 
+            `Denninger's gift card`, 
+            'Assortment of chocolates and cookies'],
+            price: 115,
+            img:require("../Images/gift_baskets/img28.jpg")
+        }       
     ]

@@ -62,12 +62,7 @@ function App() {
                             </Stack>
                             <Stack direction='horizontal' gap={5}>
                                 {giftBaskets07.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
-                                <Card className='mx-auto p-3' style={{ width: '18rem'}}>
-                                </Card>
                             </Stack>
-                            {/* <Stack direction='horizontal' gap={5}>
-                                {giftBaskets08.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
-                            </Stack> */}
                         </Stack>
                     </Accordion.Body>
                 </Accordion.Item>

@@ -9,6 +9,7 @@ import { giftBaskets04 } from './Assets/Baskets/baskets04';
 import { giftBaskets05 } from './Assets/Baskets/baskets05';
 import { giftBaskets06 } from './Assets/Baskets/baskets06';
 import { giftBaskets07 } from './Assets/Baskets/baskets07';
+//import { giftBaskets08 } from './Assets/Baskets/baskets08';
 import { metalWorks } from './Assets/Baskets/metalworks';
 import { metalWorks2 } from './Assets/Baskets/metalworks2';
 import { metalWorks3 } from './Assets/Baskets/metalworks3';
@@ -61,7 +62,12 @@ function App() {
                             </Stack>
                             <Stack direction='horizontal' gap={5}>
                                 {giftBaskets07.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
+                                <Card className='mx-auto p-3' style={{ width: '18rem'}}>
+                                </Card>
                             </Stack>
+                            {/* <Stack direction='horizontal' gap={5}>
+                                {giftBaskets08.map((basket, i) => <BasketItemHandler key={i} {...basket} img={basket.img.default} ref={ref}/>)}
+                            </Stack> */}
                         </Stack>
                     </Accordion.Body>
                 </Accordion.Item>

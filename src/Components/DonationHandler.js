@@ -16,7 +16,7 @@ const DonationHandler = (props) => {
                     <p>The button below will redirect you to the HDSB cashless system. 
                         Please specify the information below when making your donation. 
                         This will ensure that Nelson will receive the money. 
-                        Monetary donations qualify for a tax receipt.
+                        Monetary donations may qualify for a tax receipt.
                     </p>
                     <h4>Please specify the following information when redirected</h4>
                     <ol>

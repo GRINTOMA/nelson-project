@@ -2,7 +2,7 @@ export const crafts =
     [
         {
             id:1,
-            name:"Coasters & Fridge Magnets",
+            name:"Coasters",
             price: 6,
             qty:19,
             img:require("../Images/cpp/crafts/imgHover1.jpg")

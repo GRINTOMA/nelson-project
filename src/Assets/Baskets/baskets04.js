@@ -18,23 +18,25 @@ export const giftBaskets04 =
             'Bristle tees (set of 6)',
             'Heavy duty club brush'],
             price: 345,
-            img:require("../Images/Image_not_available.png")
+            img:require("../Images/gift_baskets/img13.jpg")
         },
         {
             id:14,
             name:"Disney",
             desc:"Mr. Bowden's Biology class presents...Disney",
-            list: ['item 1', 
-            'item 2', 
-            'item 3', 
-            'item 4', 
-            'item 5', 
-            'item 6', 
-            'item 7', 
-            'item 8', 
-            'item 9'],
-            price: 0,
-            img:require("../Images/Image_not_available.png")
+            list: ['Singing Frozen Doll (Elsa) ', 
+            'Frozen Doll (Anna and Olaf)', 
+            'Placemat', 
+            'Frozen fork and spoon', 
+            'Matching Game', 
+            'Disney Princess Story and Activity book (Enchanted Edition)', 
+            'Toy Story Beach Towel', 
+            'Yoda Short Sleeve Tee (Medium 7-8)', 
+            'Captain America Action Figure',
+            'Avengers Blanket  (40 x 50 inch)',
+            'R2D2 Plush'],
+            price: 134,
+            img:require("../Images/gift_baskets/img14.jpg")
         },
         {
             id:15,
@@ -61,13 +63,18 @@ export const giftBaskets04 =
             id:16,
             name:"Movie Night",
             desc:"Ms. Mullan's Healthcare class presents....Movie Night.",
-            list: ['Popcorn maker', 
-            'Popcorn', 
-            'Seasonings', 
-            'Hot chocolate', 
-            'Blanket'],
-            price: 0,
-            img:require("../Images/Image_not_available.png")
+            list: ['Large Popcorn Maker', 
+            '3pk Kernels Popcorn Seasonings', 
+            '2 Tins of Hot Chocolate', 
+            'Several chocolate bars',
+            'Candy (fuzzy peaches, candy canes, sour patch kids, etc.)',
+            '$30 gift card for Cineplex Theatres',
+            'Large Jaw’s Blanket (plush)',
+            'Chips (lays, pringles)',
+            'Handcrafted Candle',
+            'Popcorn kernels for popcorn maker'],
+            price: 250,
+            img:require("../Images/gift_baskets/img16.jpg")
         },
         
     ]

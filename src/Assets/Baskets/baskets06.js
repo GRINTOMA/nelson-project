@@ -53,7 +53,7 @@ export const giftBaskets06 =
         {
             id:24,
             name:"Cherubs",
-            desc:'Donated by the Keirs family.',
+            desc:'Donated by the Kiers family.',
             list: ['2 sets of 6 Vintage Mikasa guilded porcelain cherub musician set. Each cherub is 4.00" x 2.50"'],
             price: 60,
             img:require("../Images/gift_baskets/img24.jpg")

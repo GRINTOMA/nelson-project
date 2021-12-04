@@ -57,5 +57,14 @@ export const giftBaskets07 =
             'Assortment of chocolates and cookies'],
             price: 115,
             img:require("../Images/gift_baskets/img28.jpg")
-        }       
+        },
+        {
+            id:29,
+            name:"Fishing",
+            desc:"Mr. Kowgier's English class presents....Fishing!",
+            list: ['$25 Canadian Tire gift card', 
+            'Plano Large 3 tray box'],
+            price: 55,
+            img:require("../Images/gift_baskets/img29.jpg")
+        }  
     ]

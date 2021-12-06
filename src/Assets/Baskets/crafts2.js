@@ -18,7 +18,7 @@ export const crafts2 =
             id:6,
             name:"Happy Holidays (4 pack)",
             price: 6,
-            qty:7,
+            qty:6,
             img:require("../Images/cpp/cards/imgHover3.jpg")
         }
     ]

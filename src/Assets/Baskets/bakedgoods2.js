@@ -4,7 +4,7 @@ export const bakedGoods2 =
             id:5,
             name:'Banana Bread Loaf',
             price: 5,
-            qty:9,
+            qty:6,
             img:require("../Images/cpp/baked_goods/img05.jpg")
         },
         {
@@ -23,9 +23,9 @@ export const bakedGoods2 =
         },
         {
             id:8,
-            name:'GingerBread Cookies',
+            name:'GingerBread Cookies SOLD OUT',
             price: 4,
-            qty:8,
+            qty:0,
             img:require("../Images/cpp/baked_goods/img08.jpg")
         }
     ]

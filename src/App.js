@@ -17,7 +17,6 @@ import { metalWorks4 } from './Assets/Baskets/metalworks4';
 import { bakedGoods } from './Assets/Baskets/bakedgoods';
 import { bakedGoods2 } from './Assets/Baskets/bakedgoods2';
 import { crafts } from './Assets/Baskets/crafts';
-import { crafts2 } from './Assets/Baskets/crafts2';
 import BasketItemHandler from './Components/BasketItemHandler';
 import CardMetalWorksHandler from './Components/CardMetalWorksHandler';
 import DonationHandler from './Components/DonationHandler';
@@ -109,9 +108,6 @@ function App() {
                             </Stack>
                             <Stack direction='horizontal' gap={1}>
                                 {crafts.map((order, i) => <CardHandler key={i} {...order} img={order.img.default}/>)}
-                            </Stack>
-                            <Stack direction='horizontal' gap={1}>
-                                {crafts2.map((order, i) => <CardHandler key={i} {...order} img={order.img.default}/>)}
                             </Stack>
                         </Stack>
                     </Accordion.Body>

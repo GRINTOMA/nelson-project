@@ -4,14 +4,14 @@ export const crafts =
             id:1,
             name:"Coasters",
             price: 6,
-            qty:19,
+            qty:17,
             img:require("../Images/cpp/crafts/imgHover1.jpg")
         },
         {
             id:2,
             name:"Wood Slice Snowman Ornament",
             price: 7,
-            qty:17, 
+            qty:14, 
             img:require("../Images/cpp/crafts/img2.jpg")
         },
         {

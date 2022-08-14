@@ -8,3 +8,6 @@
   
 ## Current Build
   A live viewable version of the web app can be found [here](https://www.nelson-holiday-sale.com)
+
+## Nelson Project 2.0
+  The second version of the nelson project will be designed primarily as a mobile app with secondary web functionality
